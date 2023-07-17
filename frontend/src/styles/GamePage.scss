@@ -1,0 +1,148 @@
+.active-member{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding:7px;
+    border-radius: 15px;
+    background-color: #eeeeee;
+
+
+
+    .user-avatar{
+        position: relative;
+        .wrapper-img{
+            border-radius: 50%;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.45);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.45);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.45);
+            overflow: hidden;
+            height: 50px;
+            width: 50px;    
+            margin-bottom: 5px;
+
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.user-status{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    z-index: 10;
+    bottom: 5px;
+    right: 5px;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+.game-block{
+    min-width: 400px;
+    width: 50vw;
+    height: 100vh;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+    box-sizing: border-box;
+
+    .row-answers{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px;
+        width: 50%;
+    }
+
+    h2{
+        margin-bottom: 15px;
+    }
+    p{
+        font-size: 1.15em;
+    }
+
+    button{
+        cursor: pointer;
+        width: 100%;
+        font-size: 1em;
+        font-weight: 800;
+        border-radius: 30px;
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+
+}
+
+.wrong-answer{
+    position: relative; 
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: ease .4s all;
+        pointer-events: none;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.2);
+    }
+}
+
+.row-waiting{
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    width: 50%;
+}
+
+.waiting-user{
+    display: flex;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    margin: 0 10px;
+
+    div{
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 50%;
+        
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    span{
+        width: 100%;
+    }
+}
+
+.answered-user{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    margin: 6px 0;
+}
+
+.button-section{
+    position: relative;
+    width: 100%;
+}
+
+.buttons-block{
+    display: flex;
+    gap: 30px
+}

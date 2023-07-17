@@ -1,0 +1,323 @@
+$widthInput: 60%;
+$heightInput: 3em;
+
+$colorBackground: #1B1C21;
+$colorItem: #232429;
+$colorTitle: #12131E;
+
+.lobby-window{
+    height: 80%;
+    width: $widthInput;
+    max-width: 425px;
+    border-radius: 40px;
+    background-color: $colorBackground;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    @media(max-width: 650px){
+        width:60%;
+    }
+}
+
+.lobby-header{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colorTitle;
+    font-weight: 700;
+    font-size: 25px;
+    color: #BEBEC0;
+}
+
+.lobby-users{
+    flex: 1;
+}
+
+.user{
+    background-color: $colorItem;
+    margin: 10px 10px 0 10px;
+    border-radius: 10px;
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    border-radius: 25px;
+    align-items: center;
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    color: #BEBEC0;
+    .user-image-lobby{
+        border-radius: 50%;
+        margin-right: 10%;
+        margin: 10px;
+        width: 60px;
+        height: 60px;
+        max-width: None; 
+        overflow: hidden;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+        }   
+    }
+    .user-main-sec{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        h3{
+            margin: auto;
+        }
+    }
+    
+}
+
+
+
+.settings-window{
+    width: 531px;
+    height: 100vh;
+    background-color: $colorBackground;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    z-index: 10;
+    border-radius: 0px 50px 50px 0px;
+    position: absolute;
+    // transform: translateX(-531px);
+
+    .settings-title{
+        background-color: $colorTitle;
+        height: 100px;
+        color:#BEBEC0;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            font-weight: 700;
+            font-size: 25px;
+        }
+    }
+}
+
+
+.settings-menu-enter{
+    transform: translateX(-100%);
+}
+.settings-menu-enter-active{
+    transform: translateX(0);
+    transition: all .5s ease-out
+}
+.settings-menu-exit{
+}
+.settings-menu-exit-active{
+    transform: translateX(-100%);
+    transition: all .5s ease-out
+}
+
+.settings-item{
+    background-color: $colorItem;
+    color:#BEBEC0;
+    height: 100px;
+    cursor: pointer;
+    margin: 10px 30px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    span{
+        border-radius: 50%;
+        height: 80px;
+        max-width: None;
+        overflow: hidden;
+        position: relative;
+        img{
+            height: 100%;
+        }   
+    }
+    .right-item{
+        position: absolute;
+        right: 30px;
+        display: flex;
+    }
+    .image-game{
+        position: absolute;
+        left: 15px;
+        height: 70px;
+        width: 70px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    h3{
+        margin: auto;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    
+}
+.settings{
+    position: absolute!important;
+    top: 30px;
+    left: 30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.settings-row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px 0;
+    flex: 1;
+    overflow: auto;
+}
+.layout{
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 9;
+    background-color: rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.layout-active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.layout-amin-enter{
+    opacity: 0;
+}
+.layout-amin-enter-active{
+    opacity: 1;
+    transition: all .5s ease
+}
+.layout-amin-exit{
+}
+.layout-amin-exit-active{
+    opacity: 0;
+    transition: all .5s ease
+}
+
+
+.menu-primary-enter{
+    position: absolute;
+    transform: translateX(-110%);
+}
+.menu-primary-enter-active{
+    transform: translateX(0);
+    transition: all .5s ease
+}
+.menu-primary-exit{
+    position: absolute;
+}
+.menu-primary-exit-active{
+    transform: translateX(-110%);
+    transition: all .5s ease
+}
+
+
+.menu-secondary-enter{
+    transform: translateX(110%);
+}
+.menu-secondary-enter-active{
+    transform: translateX(0);
+    transition: all .5s ease
+}
+.menu-secondary-exit{
+}
+.menu-secondary-exit-active{
+    transform: translateX(110%);
+    transition: all .5s ease
+}
+
+.game-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    flex: 1;
+
+    .button-ready{
+        height: 70px;
+        width: 400px;
+        font-weight: 700;
+        font-size: 19px;
+        color: #FFFFFF;
+    }
+
+}
+.game-description{
+    color: #BEBEC0;
+    margin: 10px 0 ;
+    
+    p{
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px; 
+    }
+}
+.user-image{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.input-username{
+    margin-top: 45px;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    
+
+    input[type=text]{
+        color: #BEBEC0;
+        border: 2px solid #272DC4;
+        border-right: none;
+        width: 85%;
+        height: 90%;
+        border-radius: 25px 0px 0px 25px;
+        background-color: $colorBackground;
+        text-align: center;
+        font-weight: 700;
+        font-size: 18px;
+        outline:none;
+        &:active{
+            box-shadow: 0px 10px 35px rgba(39, 45, 196, 0.7);
+        }
+        &:focus{
+            box-shadow: 0px 10px 35px rgba(39, 45, 196, 0.7);
+        }
+    }
+    button{
+        width: 15%;
+        border-radius: 0px 25px 25px 0px;
+    }
+}
